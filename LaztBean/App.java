@@ -12,5 +12,7 @@ public class App
         a.code();
         System.out.println(a.getAge());
 
+        // Desktop = (Desktop)context.getBean("com2");
+
     }
 }
