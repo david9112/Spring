@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--<bean id="alien1" class="org.example.Alien scope="prototype OR singleton(Default)">-->
+    <bean id="alien1" class="org.example.Alien">
+<!--        setter injection -->
+<!--        <property name="age" value="21"> </property>-->
+<!--        <property name="lap" ref="lap1"> </property>-->
+
+<!--       constructor injection -->
+<!--        <constructor-arg type="org.example.Laptop" ref="lap1"> </constructor-arg>-->
+<!--        <constructor-arg type="int" value="22"> </constructor-arg>-->
+
+        <constructor-arg name="lap" ref="lap1"> </constructor-arg>
+        <constructor-arg name="age" value="22"> </constructor-arg>
+
+<!--        <constructor-arg index="1" ref="lap1"> </constructor-arg>-->
+<!--        <constructor-arg index="0" value="22"> </constructor-arg>-->
+    </bean>
+    <bean id="lap1" class="org.example.Laptop">
+    </bean>
+</beans>
